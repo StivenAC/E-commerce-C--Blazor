@@ -1,0 +1,185 @@
+﻿@page "/contacto"
+
+<h3 class="title">Contacto y Soporte</h3>
+
+<div class="content">
+    <div class="card">
+        <h4>¿Cómo podemos ayudarte?</h4>
+        <p>En Marishop, nos aseguramos de brindar el mejor soporte a nuestros clientes. Si tienes preguntas o necesitas asistencia, no dudes en ponerte en contacto con nuestro equipo de soporte.</p>
+    </div>
+
+    <div class="card">
+        <h4>Opciones de contacto</h4>
+        <p>Existen varias formas de ponerte en contacto con nosotros:</p>
+        <ul>
+            <li><strong>Correo electrónico:</strong> Envíanos un correo a <a href="mailto:support@marishop.com" class="enlace">support@marishop.com</a> y uno de nuestros agentes se pondrá en contacto contigo lo antes posible.</li>
+            <li><strong>Chat en vivo:</strong> Habla directamente con uno de nuestros representantes a través del chat en vivo en nuestra página web.</li>
+            <li><strong>Teléfono:</strong> Llama al número <a href="tel:+1234567890" class="enlace">+57 302 534-3445</a> para hablar con nuestro equipo de atención al cliente.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4>Horario de atención</h4>
+        <p>Nuestro equipo está disponible para ayudarte en el siguiente horario:</p>
+        <ul>
+            <li>Lunes a Viernes: 9:00 AM - 6:00 PM</li>
+            <li>Sábado: 10:00 AM - 2:00 PM</li>
+            <li>Domingo: Cerrado</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4>Formulario de contacto</h4>
+        <p>Si prefieres enviar un mensaje, puedes completar el siguiente formulario y nos pondremos en contacto contigo lo antes posible:</p>
+        <EditForm Model="contactModel" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <InputText id="name" class="form-control" @bind-Value="contactModel.Name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <InputText id="email" type="email" class="form-control" @bind-Value="contactModel.Email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <InputTextArea id="message" class="form-control" @bind-Value="contactModel.Message" required />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-Sec">Enviar mensaje</button>
+            </div>
+        </EditForm>
+    </div>
+
+    <div class="card">
+        <h4>Información adicional</h4>
+        <p>Para más detalles sobre Marishop, sus políticas y otros aspectos relevantes, visita nuestras secciones de <a href="/info" class="enlace">Información Adicional</a>.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/bareta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #2c3e50;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+    h4 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .enlace {
+        color: #4a6f58;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .enlace:hover {
+            text-decoration: underline;
+        }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .btn-Sec {
+        background-color: #4a6f58;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .btn:hover {
+            background-color: #3e5a47;
+        }
+</style>
+
+@code {
+    private ContactModel contactModel = new ContactModel();
+
+    private void HandleValidSubmit()
+    {
+        Console.WriteLine($"Nombre: {contactModel.Name}, Correo: {contactModel.Email}, Mensaje: {contactModel.Message}");
+    }
+
+    public class ContactModel
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Message { get; set; }
+    }
+}

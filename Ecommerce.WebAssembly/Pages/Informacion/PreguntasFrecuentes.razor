@@ -1,0 +1,97 @@
+﻿@page "/preguntas-frecuentes"
+
+<h3 class="title">Preguntas Frecuentes</h3>
+
+<div class="content">
+    <div class="card">
+        <h4>¿Cómo puedo realizar una compra?</h4>
+        <p>Para realizar una compra en Marishop, simplemente selecciona los productos que deseas añadir al carrito y sigue el proceso de pago, donde podrás elegir tu método de pago y envío preferido.</p>
+    </div>
+
+    <div class="card">
+        <h4>¿Cuáles son los métodos de pago disponibles?</h4>
+        <p>Ofrecemos diversos métodos de pago, incluyendo tarjetas de crédito y débito, transferencias bancarias y opciones de pago en línea como PayPal.</p>
+    </div>
+
+    <div class="card">
+        <h4>¿Cuánto tiempo tarda el envío?</h4>
+        <p>El tiempo de envío depende de la ubicación y el método elegido. Generalmente, los envíos se procesan dentro de 1-3 días hábiles, con tiempos de entrega de entre 3 y 7 días hábiles.</p>
+    </div>
+
+    <div class="card">
+        <h4>¿Puedo devolver un producto?</h4>
+        <p>Sí, ofrecemos una política de devoluciones dentro de los primeros 15 días tras la compra. El producto debe estar en condiciones originales para ser aceptado en la devolución.</p>
+    </div>
+
+    <div class="card">
+        <h4>¿Es seguro comprar en Marishop?</h4>
+        <p>Sí, Marishop utiliza tecnología de cifrado SSL para proteger la información de nuestros clientes durante todo el proceso de compra, garantizando la máxima seguridad.</p>
+    </div>
+
+    <div class="card">
+        <h4>¿Qué hago si tengo problemas con mi pedido?</h4>
+        <p>Si tienes algún problema con tu pedido, nuestro equipo de soporte está disponible para ayudarte. Puedes contactarnos a través de correo electrónico o chat en vivo.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/bareta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #2c3e50;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+    h4 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+</style>

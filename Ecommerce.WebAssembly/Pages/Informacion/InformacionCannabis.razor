@@ -1,0 +1,102 @@
+﻿@page "/informacion-cannabis"
+
+<h3 class="title">Información sobre el Cannabis</h3>
+
+<div class="content">
+    <div class="card">
+        <h4>¿Qué es el Cannabis?</h4>
+        <p>El cannabis es una planta que se utiliza con fines médicos, recreativos e industriales. Contiene compuestos químicos conocidos como cannabinoides, entre los que destacan el THC (tetrahidrocannabinol) y el CBD (cannabidiol), que son responsables de sus efectos en el cuerpo humano.</p>
+    </div>
+
+    <div class="card">
+        <h4>Beneficios del Cannabis</h4>
+        <p>El cannabis ha mostrado potencial en el tratamiento de diversas condiciones de salud, como dolor crónico, ansiedad, insomnio, entre otros. Además, algunos estudios sugieren que el CBD tiene propiedades antiinflamatorias y antioxidantes.</p>
+    </div>
+
+    <div class="card">
+        <h4>Tipos de Cannabis</h4>
+        <p>Existen tres principales tipos de cannabis: Cannabis sativa, Cannabis indica y Cannabis ruderalis. Cada uno tiene características distintas, y se utilizan para producir diferentes productos como flores, aceites y comestibles.</p>
+    </div>
+
+    <div class="card">
+        <h4>Usos Medicinales</h4>
+        <p>El uso medicinal del cannabis está aprobado en algunos países para tratar enfermedades como epilepsia, esclerosis múltiple, y ciertos tipos de cáncer. Sin embargo, es importante que los pacientes consulten con un profesional de salud antes de su consumo.</p>
+    </div>
+
+    <div class="card">
+        <h4>Usos Recreativos</h4>
+        <p>En algunos lugares, el cannabis es legal para uso recreativo. Los consumidores lo utilizan para disfrutar de sus efectos psicoactivos, que incluyen euforia, relajación y aumento del apetito.</p>
+    </div>
+
+    <div class="card">
+        <h4>Riesgos y Precauciones</h4>
+        <p>Si bien el cannabis tiene beneficios potenciales, su consumo también puede tener efectos adversos. El abuso puede causar dependencia, problemas cognitivos y de memoria, y efectos psicológicos. Es crucial consumirlo de manera responsable y estar al tanto de sus posibles efectos secundarios.</p>
+    </div>
+
+    <div class="card">
+        <h4>Regulaciones Legales</h4>
+        <p>Las leyes sobre el cannabis varían significativamente entre países y estados. Algunos lugares permiten su uso tanto medicinal como recreativo, mientras que en otros sigue siendo ilegal. Es importante conocer las leyes locales antes de comprar o consumir cannabis.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/bareta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #2c3e50;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+    h4 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+</style>

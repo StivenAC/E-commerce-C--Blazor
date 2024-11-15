@@ -1,0 +1,152 @@
+﻿@page "/productos"
+
+@inject IProductoServicio productoServicio
+@inject IToastService toastService
+@inject SweetAlertService Swal
+
+@attribute [Authorize(Roles = "Administrador")]
+
+<div class="row justify-content-center mt-3">
+    <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
+        <div class="d-grid gap-1 col-12 mx-auto">
+            <a class="btn btn-primary" href="/producto">Nuevo producto</a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8 col-xl-9 mb-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar producto..." @bind-value="buscar">
+            <button class="btn btn-primary" type="button" @onclick="(async()=> await ObtenerProductos(buscar))">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row gx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-start mt-2">
+    @if (lista != null)
+    {
+        foreach (var item in lista)
+        {
+            <div class="col mb-5">
+                <div class="card h-100">
+                    @if(DateTime.Now < item.FechaCreacion.Value.AddDays(30))
+                    {
+                        <div class="badge bg-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+
+                    }
+                    <div class="badge bg-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Nuevo</div>
+                    <img class="card-img-top border-dark border-1" src="@item.Imagen">
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">@item.Nombre</h5>
+                            @if (item.PrecioOferta != 0 && item.PrecioOferta < item.Precio)
+                            {
+                                <span class="text-danger text-decoration-line-through">S/. @item.Precio</span>
+                                <span>S /.@item.PrecioOferta</span>
+                            }
+                            else
+                            {
+                                <span>S /.@item.Precio</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="row justify-content-between">
+                            <a class="col-5 btn btn-sm btn-outline-primary mt-auto" href="/producto/@item.IdProducto">
+                                <i class="bi bi-pencil fs-5"></i>
+                            </a>
+                            <button class="col-5 btn btn-sm btn-outline-danger mt-auto" @onclick="(async () => await Eliminar(item))">
+                                <i class="bi bi-trash fs-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }
+</div>
+<style>
+    body {
+        background-image: url('/images/bareta.jpg'); /* Ruta desde la raíz del servidor */
+        background-size: cover; /* Hace que la imagen cubra toda el área del fondo */
+        background-position: center; /* Centra la imagen */
+        background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    }
+
+    .card {
+        border: 2px solid #4a6f58; /* Borde verde oscuro */
+    }
+
+    .btn-primary {
+        background-color: #d28eff;
+        border-color: #d28eff;
+    }
+
+    a {
+        color: #6a0dad;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #6a0dad;
+        color: white
+    }
+</style>
+@code {
+    private List<ProductoDTO>? lista = null;
+    private string buscar = "";
+
+    private async Task ObtenerProductos(string Valor = "")
+    {
+        var response = await productoServicio.Lista(Valor);
+        if (response.EsCorrecto)
+        {
+            lista = (List<ProductoDTO>)response.Resultado!;
+        }
+        else
+        {
+            lista = new List<ProductoDTO>();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ObtenerProductos();
+    }
+
+    private async Task Eliminar(ProductoDTO modelo)
+    {
+        SweetAlertResult result = await Swal.FireAsync(new SweetAlertOptions
+            {
+                Title = "¿Estás seguro?",
+                Text = $"Eliminar Producto: {modelo.Nombre}",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                ConfirmButtonText = "Sí, eliminar",
+                CancelButtonText = "No, volver"
+            });
+
+        if (result.IsConfirmed)
+        {
+            var response = await productoServicio.Eliminar(modelo.IdProducto);
+            if (response.EsCorrecto)
+            {
+                await ObtenerProductos();
+                toastService.ShowSuccess("Producto fue eliminada");
+            }
+            else
+            {
+                toastService.ShowWarning(response.Mensaje);
+            }
+        }
+    }
+}

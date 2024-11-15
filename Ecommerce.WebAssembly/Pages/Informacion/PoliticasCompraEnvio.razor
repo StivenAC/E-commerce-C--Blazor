@@ -1,0 +1,116 @@
+﻿@page "/politicas-compra-envio"
+
+<h3 class="title">Políticas de Compra y Envío</h3>
+
+<div class="content">
+    <div class="card">
+        <h4>Política de Compra</h4>
+        <p>En Marishop, nos aseguramos de ofrecer una experiencia de compra clara y sencilla. Las compras se procesan de acuerdo con los siguientes pasos:</p>
+        <ul>
+            <li>Selecciona los productos que deseas comprar y agrégales a tu carrito.</li>
+            <li>Realiza el pago de tu pedido mediante los métodos disponibles.</li>
+            <li>Recibirás una confirmación de tu pedido y un número de seguimiento para consultar el estado de tu envío.</li>
+        </ul>
+        <p>Los pagos se realizarán de forma segura y los datos de tus transacciones son confidenciales.</p>
+    </div>
+
+    <div class="card">
+        <h4>Envíos</h4>
+        <p>Los envíos se realizan a través de los servicios de mensajería más confiables, con las siguientes opciones:</p>
+        <ul>
+            <li>Envío estándar: entre 3 a 5 días hábiles, según tu ubicación.</li>
+            <li>Envío exprés: entre 1 a 2 días hábiles, según tu ubicación.</li>
+        </ul>
+        <p>El costo del envío varía según el método seleccionado y la ubicación de entrega. Puedes consultar el costo exacto al momento de realizar tu compra.</p>
+    </div>
+
+    <div class="card">
+        <h4>Seguimiento de Pedidos</h4>
+        <p>Después de realizar tu compra, podrás hacer seguimiento de tu pedido utilizando el número de seguimiento proporcionado. Simplemente ingresa el número en el sitio web de la empresa de mensajería para conocer el estado de tu envío.</p>
+    </div>
+
+    <div class="card">
+        <h4>Devoluciones y Reembolsos</h4>
+        <p>Si por alguna razón no estás satisfecho con tu compra, ofrecemos un plazo de 30 días para realizar devoluciones, siempre y cuando el producto se encuentre en su estado original. Los gastos de envío de las devoluciones son a cargo del cliente, salvo que el producto esté defectuoso.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/bareta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #2c3e50;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+    h4 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .enlace {
+        color: #4a6f58;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .enlace:hover {
+            text-decoration: underline;
+        }
+</style>

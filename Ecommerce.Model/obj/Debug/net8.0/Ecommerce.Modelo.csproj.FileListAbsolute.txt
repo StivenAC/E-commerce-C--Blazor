@@ -1,0 +1,14 @@
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Modelo.deps.json
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Modelo.dll
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Modelo.pdb
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.AssemblyInfoInputs.cache
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.AssemblyInfo.cs
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.dll
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\refint\Ecommerce.Modelo.dll
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.pdb
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\ref\Ecommerce.Modelo.dll
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\bin\Debug\net8.0\Ecommerce.Modelo.runtimeconfig.json
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.csproj.AssemblyReference.cache
+C:\Users\Stiven\source\repos\Ecommerce\Ecommerce.Model\obj\Debug\net8.0\Ecommerce.Modelo.genruntimeconfig.cache

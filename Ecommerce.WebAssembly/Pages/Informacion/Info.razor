@@ -1,0 +1,112 @@
+﻿@page "/info"
+
+<h3 class="title">Información Adicional</h3>
+
+<div class="content">
+    <div class="card">
+        <h4><a href="/sobre-nosotros" class="enlace">Sobre Marishop</a></h4>
+        <p>Marishop es una tienda en línea comprometida con la venta de productos de cannabis de alta calidad. Nuestra misión es ofrecer productos que cumplan con los más altos estándares, siempre respetando las leyes y normativas aplicables. Nos dedicamos a brindar a nuestros clientes una experiencia segura, confiable y transparente.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/informacion-cannabis" class="enlace">Información sobre el Cannabis</a></h4>
+        <p>Conoce más sobre el cannabis, sus usos, beneficios y cómo se cultiva. Esta sección ofrece una visión completa para que puedas tomar decisiones informadas sobre los productos que ofrecemos en Marishop.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/preguntas-frecuentes" class="enlace">Preguntas Frecuentes (FAQ)</a></h4>
+        <p>Encuentra respuestas a las preguntas más comunes sobre temas como el proceso de compra, envíos, devoluciones, seguridad y el uso de productos.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/politicas-compra-envio" class="enlace">Políticas de Compra y Envío</a></h4>
+        <p>Detalles sobre nuestras políticas de compra, tiempos de procesamiento y métodos de envío disponibles, además de información sobre cómo hacer seguimiento a tus pedidos.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/politicas-privacidad" class="enlace">Política de Privacidad</a></h4>
+        <p>Conoce cómo protegemos tu información y datos personales en Marishop, en cumplimiento con las leyes de privacidad aplicables.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/regulaciones-legales" class="enlace">Regulaciones Legales</a></h4>
+        <p>Información sobre las normativas legales aplicables a la compra de cannabis, incluyendo las restricciones de edad y otros requisitos legales que deben cumplir los compradores.</p>
+    </div>
+
+    <div class="card">
+        <h4><a href="/contacto" class="enlace">Contacto y Soporte</a></h4>
+        <p>Si tienes alguna pregunta adicional o necesitas asistencia, no dudes en ponerte en contacto con nuestro equipo de soporte. Visita nuestra página de contacto para más detalles.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        background-image: url('/images/bareta.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #2c3e50;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+    h4 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .enlace {
+        color: #4a6f58;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .enlace:hover {
+            text-decoration: underline;
+        }
+</style>
