@@ -109,10 +109,5 @@ Ecommerce.sln
 
 ---
 
-## 🧑‍💻 Contacto
-
-¿Tienes preguntas o deseas contribuir? ¡Estás invitado a colaborar!
-
----
 
 > Este proyecto fue diseñado con fines educativos y como base extensible para soluciones e-commerce modernas con tecnologías .NET.
